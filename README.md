@@ -1,5 +1,6 @@
 # AtoZscrollflutter - Alphabet indexable scrollbar
 A simple alphabet indexed scrollbar for flutter "EZ TO USE"
+
 ![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/demo.gif)
 
 ## Only one dependency: 

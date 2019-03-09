@@ -1,5 +1,6 @@
 # AtoZscrollflutter - Alphabet indexable scrollbar
 A simple alphabet indexed scrollbar for flutter "EZ TO USE"
+![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/demo.gif)
 
 ## Only one dependency: 
 * `diacritic: ^0.1.1`
@@ -53,5 +54,7 @@ A little amount of data is needed because the size of the scroller is calculated
 This AtoZlist is working only if you let it fill the body of your main widget. If you want to add some other widget above or below you should probably substract the *widget.height* to `contrainsts.biggest.height` when `_heightscroller` is calculated. (I will probably make an exemple soon.)
 
 ## Exemple of too little data:
+
+![tonotreproduce.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/tonotreproduce.gif)
 
 Please dont reproduce at home.

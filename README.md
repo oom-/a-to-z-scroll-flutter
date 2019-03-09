@@ -54,6 +54,8 @@ This stuff didn't got a lot of tests then it's probably some cases that i didnt 
 A little amount of data is needed because the size of the scroller is calculated on the number of items `keys`it mean the number of differents first letters in your data list.
 This AtoZlist is working only if you let it fill the body of your main widget. If you want to add some other widget above or below you should probably substract the *widget.height* to `contrainsts.biggest.height` when `_heightscroller` is calculated. (I will probably make an exemple soon.)
 
+You can find exactly how it work explained by steps here: https://github.com/oom-/AtoZscrollflutter-/blob/master/tutorialsample.md
+
 ## Exemple of too little data:
 
 ![tonotreproduce.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/tonotreproduce.gif)

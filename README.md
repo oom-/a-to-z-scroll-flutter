@@ -2,6 +2,7 @@
 A simple alphabet indexed scrollbar for flutter "EZ TO USE"
 
 ![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/demo.gif)
+![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/search.gif)
 
 ## Only one dependency: 
 * `diacritic: ^0.1.1`
@@ -54,6 +55,15 @@ This stuff didn't got a lot of tests then it's probably some cases that i didnt 
 ## PPS:
 A little amount of data is needed because the size of the scroller is calculated on the number of items `keys`it mean the number of differents first letters in your data list.
 This AtoZlist is working only if you let it fill the body of your main widget. If you want to add some other widget above or below you should probably substract the *widget.height* to `contrainsts.biggest.height` when `_heightscroller` is calculated. (I will probably make an exemple soon.)
+
+Edit: i made simple search exemple here : https://github.com/oom-/AtoZscrollflutter-/blob/master/atozscrollwithsearch.dart
+
+```dart
+ body: new AtoZSlider(list, (i) => {
+        debugPrint("Click on : (" + i.toString() + ") -> " + i.toString()),
+        debugPrint("Item translated: " + list[i])
+      }, (word) => {debugPrint("SearchWord: " + word)}),
+```
 
 You can find exactly how it work explained by steps here: https://github.com/oom-/AtoZscrollflutter-/blob/master/tutorialsample.md
 

@@ -35,6 +35,8 @@ class _AtoZSlider extends State<AtoZSlider> {
   var _itemfontsize;
   var _animationcounter; //wait end of all animations
   var _lastoffset;
+  var _sizeheightcontainer;
+  
   ScrollController _scrollController;
 
   void onscrolllistview() {
@@ -81,6 +83,7 @@ class _AtoZSlider extends State<AtoZSlider> {
     _itemsizeheight = 20.0; //NOTE: size items
     _itemfontsize = 14.0; //NOTE: fontsize items
     _lastoffset = 0.0;
+    _sizeheightcontainer = 0.0;
     _scrollController = ScrollController();
     _scrollController.addListener(onscrolllistview);
     _alphabet = new List<String>();
@@ -108,6 +111,7 @@ class _AtoZSlider extends State<AtoZSlider> {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, contrainsts) {
       _heightscroller = contrainsts.biggest.height / _alphabet.length; //NOTE: Here the contrainsts.biggest.height is the height of the list (height of body)
+      _sizeheightcontainer = contrainsts.biggest.height; //NOTE: substract the height of previous item to adapt the listview height
       return Stack(alignment: Alignment.topRight, children: [ //NOTE: Here to add some other components (but you need to remove they height from calcs (line above))
         ListView.builder(
           controller: _scrollController,
@@ -152,7 +156,7 @@ class _AtoZSlider extends State<AtoZSlider> {
             setState(() {
               if ((_offsetContainer + details.delta.dy) >= 0 &&
                   (_offsetContainer + details.delta.dy) <=
-                      (context.size.height - _heightscroller)) {
+                      (_sizeheightcontainer - _heightscroller)) {
                 _offsetContainer += details.delta.dy;
                 _text = _alphabet[
                     ((_offsetContainer / _heightscroller) % _alphabet.length)

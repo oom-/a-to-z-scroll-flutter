@@ -38,6 +38,7 @@ Just take a look of the "NOTE:" flage in the code for simple changes.
 _itemsizeheight = 20.0; //NOTE: size items
 _itemfontsize = 14.0; //NOTE: fontsize items
 _heightscroller = contrainsts.biggest.height / _alphabet.length; //NOTE: Here the contrainsts.biggest.height is the height of the list (height of body)
+_sizeheightcontainer = contrainsts.biggest.height; //NOTE: substract the height of previous item to adapt the listview height
 return Stack(alignment: Alignment.topRight, children: [ //NOTE: Here to add some other components (but you need to remove they height from calcs (line above))
 itemBuilder: (BuildContext context, int index) { //NOTE: How you want to generate your items
 child: Container( //NOTE: this container is the scroll bar it need at least to have height => _heightscroller

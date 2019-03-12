@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:diacritic/diacritic.dart';
 
 class AtoZSlider extends StatefulWidget {

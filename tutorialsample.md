@@ -30,6 +30,9 @@ To calculate your `ListView` height you need to take the body height and remove 
 To calculate your scroller height you can do it efficiently and divide the body height by the number of letter in your alphabet array.
 `_heightscroller = contrainsts.biggest.height / _alphabet.length;`
 
+To calculate your `ListView` height:
+`_sizeheightcontainer = contrainsts.biggest.height;`
+
 ### Second part
 
 We will first make the scroller show the letter index with a `Text` widget. Then add a `Text` widget to your controller and add a `_text` property in your custom widget to allow you to change it with the `setState` function.
@@ -133,10 +136,17 @@ You cand do it like this by exemple:
 ```dart
 if ((_offsetContainer + details.delta.dy) >= 0 &&
                   (_offsetContainer + details.delta.dy) <=
-                      (context.size.height - _heightscroller)) {
+                      (_sizeheightcontainer - _heightscroller)) {
                 _offsetContainer += details.delta.dy;
     }
 ```
+
+### PPS
+If you want to take in consideration an other object that you would put on top of it just do some calculation.
+`_sizeheightcontainer = contrainsts.biggest.height;`
+become:
+` _sizeheightcontainer = contrainsts.biggest.height - _sizefirstitem;`
+where `_sizefirstitem` is the height of your first item.
 
 This solution can be probably optimized (not send multiple animation, add var make less calcs). You can find a complete implementation here :
 [AtoZscrollflutter][2]

@@ -4,6 +4,8 @@ A simple alphabet indexed scrollbar for flutter "EZ TO USE"
 ![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/demo.gif)
 ![demo.gif](https://github.com/oom-/AtoZscrollflutter-/raw/master/search.gif)
 
+(The search exemple include regex matching)
+
 ## Only one dependency: 
 * `diacritic: ^0.1.1`
 to put in your pubspec.yaml file in `dependencies:`
